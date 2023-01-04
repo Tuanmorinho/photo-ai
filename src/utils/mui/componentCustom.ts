@@ -47,6 +47,14 @@ export const componentCustom: ThemeOptions = {
           boxShadow: 'none'
         }
       }
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundImage: 'none',
+          boxShadow: 'none'
+        }
+      }
     }
   }
 };

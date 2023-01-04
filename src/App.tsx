@@ -1,18 +1,14 @@
-import { useMemo, useState } from 'react';
+import { PaletteMode, ThemeOptions } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { MainLayout } from 'components/layout';
 import PageNotFound from 'pages/404';
 import MainPage from 'pages/main-page';
-import { Provider } from 'react-redux';
+import { useMemo } from 'react';
+import { Provider, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { store } from 'store-redux/store';
-import { PaletteMode, ThemeOptions } from '@mui/material';
+import { RootState, store } from 'store-redux/store';
 import { componentCustom } from 'utils/mui';
-
-export interface IAppProps {
-  mode: PaletteMode | 'light'
-}
 
 const getDesignTokens = (mode: PaletteMode | 'light'): ThemeOptions => ({
   palette: {
@@ -60,14 +56,13 @@ const getDesignTokens = (mode: PaletteMode | 'light'): ThemeOptions => ({
   ...componentCustom
 });
 
-function App(props: IAppProps) {
+function App() {
 
-  const { mode } = props
+  const colorMode: PaletteMode = useSelector((state: RootState) => state.colorMode.mode)
 
-  const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+  const theme = useMemo(() => createTheme(getDesignTokens(colorMode)), [colorMode]);
 
   return (
-    <Provider store={store}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
           <Routes>
@@ -77,10 +72,15 @@ function App(props: IAppProps) {
           <Route path='*' element={<PageNotFound/>} />
         </Routes>
       </ThemeProvider>
+  );
+}
+
+function AppWrapper() {
+  return (
+    <Provider store={store}>
+      <App />
     </Provider>
   );
 }
 
-// const mapStateTo
-
-export default App;
+export default AppWrapper;

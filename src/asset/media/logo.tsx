@@ -11,16 +11,16 @@ export function Logo(props: SvgIconProps) {
                 </g>
                 <defs>
                     <linearGradient id="paint0_linear_53_16" x1="1.75264" y1="34.8702" x2="27.3834" y2="18.0431" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#1A94FF" />
-                        <stop offset="1" stop-color="#0D5BB5" />
+                        <stop stopColor="#1A94FF" />
+                        <stop offset="1" stopColor="#0D5BB5" />
                     </linearGradient>
                     <linearGradient id="paint1_linear_53_16" x1="16.6518" y1="14.4271" x2="-11.654" y2="-3.92905" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0B74E5" />
-                        <stop offset="1" stop-color="#0D5BB5" />
+                        <stop stopColor="#0B74E5" />
+                        <stop offset="1" stopColor="#0D5BB5" />
                     </linearGradient>
                     <linearGradient id="paint2_linear_53_16" x1="6.40534" y1="40.1515" x2="5.05895" y2="33.4087" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0B74E5" />
-                        <stop offset="1" stop-color="#0D5BB5" />
+                        <stop stopColor="#0B74E5" />
+                        <stop offset="1" stopColor="#0D5BB5" />
                     </linearGradient>
                     <clipPath id="clip0_53_16">
                         <rect width="25.52" height="46.4" fill="white" transform="translate(0.240005 0.799999)" />

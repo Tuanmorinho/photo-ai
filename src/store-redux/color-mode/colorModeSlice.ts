@@ -1,21 +1,21 @@
-import { createTheme } from '@mui/material';
-import { createSlice } from '@reduxjs/toolkit';
+import { PaletteMode } from '@mui/material';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { IThemeStore } from 'models';
 
 const initialState: IThemeStore = {
-	theme: 'light'
+	mode: 'light'
 };
 
 const colorModeSlice = createSlice({
 	name: 'colorModeSlice',
 	initialState,
 	reducers: {
-		// setScreens(state, action) {
-		//     state.screens = action.payload
-		// }
+		toggleColorMode: (state, action: PayloadAction<PaletteMode>) => {
+		    state.mode = action.payload
+		}
 	},
 });
 
-// export const { setScreens } = colorModeSlice.actions
+export const { toggleColorMode } = colorModeSlice.actions
 
 export default colorModeSlice.reducer;

@@ -7,7 +7,7 @@ export function MainLayout() {
 	return (
 		<Stack minHeight='100vh'>
 			<Header />
-			<Container>
+			<Container sx={{ pt: '80px' }}>
                 <Outlet />
             </Container>
 		</Stack>
