@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/*' element={<App />} />
+      <Route path='/*' element={<App mode='light' />} />
     </Routes>
   </BrowserRouter>
 );

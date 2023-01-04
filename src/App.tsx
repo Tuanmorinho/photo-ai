@@ -11,10 +11,10 @@ import { PaletteMode, ThemeOptions } from '@mui/material';
 import { componentCustom } from 'utils/mui';
 
 export interface IAppProps {
-  mode?: PaletteMode | undefined
+  mode: PaletteMode | 'light'
 }
 
-const getDesignTokens = (mode: PaletteMode | undefined): ThemeOptions => ({
+const getDesignTokens = (mode: PaletteMode | 'light'): ThemeOptions => ({
   palette: {
     mode,
     ...(mode === 'light'
