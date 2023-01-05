@@ -8,10 +8,10 @@ export function ArtPreview() {
                 <Box sx={{ width: '100%', textAlign: 'center' }}>
                     <Typography variant="h6" sx={{ fontWeight: 700, lineHeight: '30px' }}>Art Preview</Typography>
                 </Box>
-                <Box sx={{ width: '100%', mt: '16px', backgroundColor: 'primary.light' }}>
-                    <Grid container justifyContent='center' alignItems='stretch' sx={{}}>
-                        {[0, 1, 2, 3].map((v, i) => (
-                            <Grid key={i} item xs={12} lg={6} justifyContent='center' alignItems='center' sx={{ width: '100%', height: '100%', py: '8px'}}>
+                <Box sx={{ width: '100%', mt: '16px', backgroundColor: 'primary.light', borderRadius: '12px' }}>
+                    <Grid container justifyContent='center' alignItems='stretch' sx={{ p: '8px' }}>
+                        {[0, 1, 2, 3].map(v => (
+                            <Grid key={v} item xs={12} lg={6} justifyContent='center' alignItems='center' sx={{ width: '100%', height: '100%', p: '8px'}}>
                                 <PreviewImage />
                             </Grid>
                         ))}
