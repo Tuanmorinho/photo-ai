@@ -1,7 +1,9 @@
+import { Box, Typography } from "@mui/material";
+
 export function ArtStyle() {
     return (
-        <>
-            This is ArtStyle
-        </>
+        <Box>
+            <Typography variant="h6" sx={{ fontWeight: 700, lineHeight: '30px' }}>Enter Prompt</Typography>
+        </Box>
     );
 }
