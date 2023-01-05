@@ -8,7 +8,7 @@ export function Prompt() {
 
     return (
         <Box sx={{ width: '100%' }}>
-            <Stack direction='column' alignItems='stretch' justifyContent='center'>
+            <Stack direction='column' alignItems='stretch' justifyContent='flex-end'>
                 <Box>
                     <Typography variant="h6" sx={{ fontWeight: 700, lineHeight: '30px' }}>Enter Prompt</Typography>
                 </Box>
