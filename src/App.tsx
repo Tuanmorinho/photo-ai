@@ -53,7 +53,7 @@ const getDesignTokens = (mode: PaletteMode | 'light'): ThemeOptions => ({
           }
         }),
   },
-  ...componentCustom
+  ...componentCustom(mode)
 });
 
 function App() {

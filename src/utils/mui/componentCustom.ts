@@ -1,6 +1,6 @@
-import { ThemeOptions } from "@mui/material";
+import { ThemeOptions, PaletteMode } from "@mui/material";
 
-export const componentCustom: ThemeOptions = {
+export const componentCustom = (colorMode: PaletteMode): ThemeOptions => ({
   typography: {
     fontFamily: 'Montserrat',
   },
@@ -41,10 +41,11 @@ export const componentCustom: ThemeOptions = {
     MuiButton: {
       styleOverrides: {
         root: {
-          color: 'white',
+          color: colorMode === 'dark' ? 'white' : 'primary.main',
           borderRadius: '200px',
           textTransform: 'none',
-          boxShadow: 'none'
+          boxShadow: 'none',
+          backgroundColor: 'transparent'
         }
       }
     },
@@ -57,4 +58,4 @@ export const componentCustom: ThemeOptions = {
       }
     }
   }
-};
+});
