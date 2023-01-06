@@ -1,1 +1,2 @@
-export * from './media'
+export * from './icon'
+export * from './image'

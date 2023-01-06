@@ -1,5 +1,5 @@
 import { Box, Button, Paper, Stack, useTheme } from '@mui/material';
-import { DarkModeIcon, LightModeIcon, Logo, TitleLogo } from 'asset/media';
+import { DarkModeIcon, LightModeIcon, Logo, TitleLogo } from 'asset/icon';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleColorMode } from 'store-redux';
 import { RootState } from 'store-redux/store';
