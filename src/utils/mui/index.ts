@@ -1,1 +1,1 @@
-export * from './componentCustom';
+export * from './theme';
