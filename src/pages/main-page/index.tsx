@@ -3,20 +3,20 @@ import { Stack } from "@mui/system";
 import { ArtPreview, ArtStyle, Prompt } from "components/pages";
 import { IPromptStore } from "models";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { generateImage } from "store-redux";
-import { RootState } from "store-redux/store";
+import { RootState, useAppDispatch } from "store-redux/store";
 
 export default function MainPage() {    
 
     const prompt: IPromptStore = useSelector((state: RootState) => state.prompt);
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const [disabled, setDisabled] = useState<boolean>(false);
 
     const handleCreateArt = () => {
         if (prompt.prompt.length !== 0 && prompt.filter.length !== 0) {
             setDisabled(true);
-            dispatch(generateImage(prompt, null))
+            dispatch(generateImage(prompt));
         };
 
     }
